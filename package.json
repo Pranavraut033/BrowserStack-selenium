@@ -1,0 +1,28 @@
+{
+  "name": "flipkart-selenium",
+  "version": "1.0.0",
+  "description": "Browserstack round 1 sub 3",
+  "main": "dist/app.js",
+  "author": "Pranav ",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "set NODE_ENV=testing & mocha --require @babel/register './src/test/*.test.js'",
+    "build": "babel src --out-dir dist",
+    "start": "set NODE_ENV=production & node dist/app.js",
+    "serve": "set NODE_ENV=development & babel-node src/app.js"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "core-js": "^3.6.5",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "nodemon": "^2.0.4"
+  }
+}
